@@ -40,56 +40,10 @@ body{
   width: 100% !important;
   height: 100vh !important;
   background-color: black !important;
-  padding: 50% 0 !important;
+  padding: 55% 0 !important;
 }
 
-/* card flip animation */
-.cardContenedor{
-  background-color: transparent; !important;
-  perspective: 3000px;
-  height: 300px;
-  border: 0px;
-  cursor: pointer !important;
-}
 
-.flip {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  transition: transform 0.6s;
-  transform-style: preserve-3d;
-}
-
-.cardContenedor:hover .flip {
-  transform: rotateY(180deg);
-}
-
-.cardFront{
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  background-color: white !important;
-  border:1rem solid red !important;
-}
-.cardFront img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-.cardBack {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  background-color: white !important;
-  border:1rem solid blue !important;
-  background-color: #EDFFF6;
-  transform: rotateY(180deg);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
 
 /* TABLET */
