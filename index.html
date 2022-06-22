@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contador automatico JS</title>
+
+	<!-- BOOTSTRAP -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+	<!-- ESTILOS -->
+	<link rel="stylesheet" href="css/estilos.css">
+
+	<!-- FONT AWESOME -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+	<main>
+		<section id="principal" class="">
+			<div class="row">
+				<!-- ESPACIO -->
+				<div class="col-1"></div>
+
+				<!-- CONTENEDOR -->
+				<div class="col-10">
+					<div class="contenedorServicios2 bg-light py-5">
+						<div class="row pt-5">
+							<!-- NUMERO 1 -->
+							<div class="col-md-4 col-12 mt-4 mt-md-0 d-flex flex-column justify-content-center align-items-center">
+								<h3 class="pb-3 numero d-flex justify-content-center align-items-center">+ 
+									<div id="txt"></div>
+								</h3>
+								<h3>T E X T O</h3>
+							</div>
+
+							<!-- NUMERO 2 -->
+							<div class="col-md-4 col-12 mt-4 mt-md-0 d-flex flex-column justify-content-center align-items-center">
+								<h3 class="pb-3 numero2 d-flex justify-content-center align-items-center">+ 
+									<div id="txt2"></div>
+								</h3>
+								<h3>T E X T O</h3>
+							</div>
+
+							<!-- NUMERO 3 -->
+							<div class="col-md-4 col-12 mt-4 mt-md-0 d-flex flex-column justify-content-center align-items-center">
+								<h3 class="pb-3 numero3 d-flex justify-content-center align-items-center">+ 
+									<div id="txt3"></div>
+								</h3>
+								<h3>T E X T O</h3>
+							</div>
+						</div>
+					</div>					
+				</div>
+
+				<!-- ESPACIO -->
+				<div class="col-1"></div>
+			</div>
+		</section>
+	</main>
+
+
+<!-- BOOTSTRAP -->
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+
+<!-- CONTADOR -->
+<script>
+	// Capturamos el elemento que deseamos observar
+const miCuadrado = document.querySelector('.numero');
+
+// Creamos un objeto IntersectionObserver
+const observerCuadrado = new IntersectionObserver((entries) => {
+      // Comprobamos todas las intesecciones. En el ejemplo solo existe una: cuadrado
+      entries.forEach((entry) => {
+          // Si es observable, entra
+          if (entry.isIntersecting) {
+             // Añadimos la clase '.cuadrado--rota'
+             function contar() {
+		        for(cuenta; cuenta <= 1000; i++){
+		        	document.getElementById('txt').innerHTML = cuenta++;
+		        	setTimeout(contar,);
+		        }
+		      }
+
+		      var cuenta = 0;
+		      contar();
+          }
+      });
+  });
+
+// Añado a mi Observable que quiero observar. En este caso el cuadrado
+observerCuadrado.observe(miCuadrado);
+
+</script>
+
+<script >
+	// Capturamos el elemento que deseamos observar
+const miCuadrado2 = document.querySelector('.numero2');
+
+// Creamos un objeto IntersectionObserver
+const observerCuadrado2 = new IntersectionObserver((entries) => {
+      // Comprobamos todas las intesecciones. En el ejemplo solo existe una: cuadrado
+      entries.forEach((entry) => {
+          // Si es observable, entra
+          if (entry.isIntersecting) {
+             // Añadimos la clase '.cuadrado--rota'
+             function contar() {
+		        for(cuenta; cuenta <= 1000; i++){
+		        	document.getElementById('txt2').innerHTML = cuenta++;
+		        	setTimeout(contar, 0);
+		        }
+		      }
+
+		      var cuenta = 0;
+		      contar();
+          }
+      });
+  });
+
+// Añado a mi Observable que quiero observar. En este caso el cuadrado
+observerCuadrado2.observe(miCuadrado2);
+
+</script>
+
+<script >
+	// Capturamos el elemento que deseamos observar
+const miCuadrado3 = document.querySelector('.numero3');
+
+// Creamos un objeto IntersectionObserver
+const observerCuadrado3 = new IntersectionObserver((entries) => {
+      // Comprobamos todas las intesecciones. En el ejemplo solo existe una: cuadrado
+      entries.forEach((entry) => {
+          // Si es observable, entra
+          if (entry.isIntersecting) {
+             // Añadimos la clase '.cuadrado--rota'
+             function contar() {
+		        for(cuenta; cuenta <= 1000; i++){
+		        	document.getElementById('txt3').innerHTML = cuenta++;
+		        	setTimeout(contar, 0);
+		        }
+		      }
+
+		      var cuenta = 0;
+		      contar();
+          }
+      });
+  });
+
+// Añado a mi Observable que quiero observar. En este caso el cuadrado
+observerCuadrado3.observe(miCuadrado3);
+
+</script>
+</body>
+</html>
